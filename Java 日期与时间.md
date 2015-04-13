@@ -1,10 +1,11 @@
-#Java日期时间(Date/Time)  
-Java在java.util包中提供了Date类，这个类封装了当前的日期和时间。   
+# Java日期时间(Date/Time)  
+Java在java.util包中提供了Date类，这个类封装了当前的日期和时间。
+
 Date类支持两种构造函数。第一个构造函数初始化对象的当前日期和时间。
 ```
 Date( )
 ```
-下面的构造函数接受一个参数等于自午夜，1970年1月1日起已经过的毫秒数  
+下面的构造函数接受一个参数等于自1970年1月1日午夜起已经过的毫秒数  
 ```
 Date(long millisec)
 ```
@@ -15,7 +16,7 @@ Date(long millisec)
 |1	|boolean after(Date date)<br>如果调用Date对象包含或晚于指定的日期则返回true，否则，返回false。|
 |2	|boolean before(Date date)<br>如果调用Date对象包含或早于日期指定的日期返回true，否则，返回false。|
 |3	|Object clone( )<br>重复调用Date对象。|
-|4	|int compareTo(Date date)<br>调用对象的值与日期比较。如果这两个值相等返回0。如果调用对象是早于日期返回一个负值。如果调用对象最迟日期返回正值。|
+|4	|int compareTo(Date date)<br>调用对象的值与日期比较。如果这两个值相等返回0。如果调用对象是早于日期返回一个负值。如果调用对象迟于日期返回正值。|
 |5	|int compareTo(Object obj)<br>以相同的compareTo(Date)操作 如果obj是一个类日期。否则，它会抛出一个ClassCastException。|
 |6	|boolean equals(Object date)<br>如果调用Date对象包含相同的时间及日期指定日期则返回true，否则，返回false。|
 |7	|long getTime( )<br>返回自1970年1月1日起已经过的毫秒数。|
@@ -23,7 +24,7 @@ Date(long millisec)
 |9	|void setTime(long time)<br>设置所指定的时间，这表示从1970年1月1日从午夜的时间和日期以毫秒为单位经过的时间。|
 |10 |	String toString( )<br>调用Date对象转换为字符串，并返回结果。|
 
-##获取当前日期和时间  
+## 获取当前日期和时间  
 在Java中容易得到当前的日期和时间。可以使用一个简单的Date对象的toString()方法，如下所示打印当前日期和时间：  
 ```
 import java.util.Date;
@@ -43,15 +44,15 @@ public class DateDemo {
 Mon May 04 09:51:52 CDT 2009
 ```
 
-##日期比较：  
+## 日期比较：  
 有以下三种方式来比较两个日期：  
 
 *	可以使用getTime() 来获得自1970年1月1日午夜十二时，起已经过的毫秒数，然后比较两个对象的值。
-*	可以使用 before( ), after( ), and equals( )，由于本月12日来的18日前，例如， new Date(99, 2, 12).before(new Date (99, 2, 18)) 返回 true。
+*	可以使用 before( ), after( ), and equals( )，由于本月12日在18日前，例如， new Date(99, 2, 12).before(new Date (99, 2, 18)) 返回 true。
 *	可以使用compareTo()方法，这是由Comparable接口定义和由日期执行。
 
-##使用SimpleDateFormat格式化日期：  
-SimpleDateFormat是一个具体的类，用于格式化和分析日期的语言环境敏感的方式。 SimpleDateFormat允许选择任何用户定义的模式为日期时间格式。例如：
+## 使用SimpleDateFormat格式化日期：  
+SimpleDateFormat是一个具体的类，用于格式化和分析日期的语言环境敏感的方式。   SimpleDateFormat允许选择任何用户定义的模式为日期时间格式。例如：  
 ```
 import java.util.*;
 import java.text.*;
@@ -72,7 +73,7 @@ public class DateDemo {
 Current Date: Sun 2004.07.18 at 04:14:09 PM PDT
 ````
 
-##简单的DateFormat格式代码：  
+## 简单的DateFormat格式代码：    
 要指定时间格式，使用时间模式字符串。在这个模式中，所有的ASCII字母被保留为模式字母，其定义如下：
 
 |字符|	描述|	例子|
@@ -98,8 +99,8 @@ Current Date: Sun 2004.07.18 at 04:14:09 PM PDT
 |'|	脱离文本|	分隔符|
 |"|	单引号	|`
 
-##用printf格式化日期：  
-日期和时间格式用printf方法可以非常轻松地做到。可以使用两个字母的格式，从t开始并在下面给出的表格中的其中一个字母结束。例如：
+## 用printf格式化日期：  
+日期和时间格式用printf方法可以非常轻松地做到。可以使用两个字母的格式，从t开始并在下面给出的表格中的其中一个字母结束。例如：  
 ```
 import java.util.Date;
 
@@ -120,8 +121,8 @@ public class DateDemo {
 ```
 Current Date/Time : Sat Dec 15 16:37:57 MST 2012
 ```
-如果提供日期多次格式化是一种比较笨的做法。一个格式字符串可以指示要格式化的参数的索引。  
-索引必须紧跟在％，并必须由$终止。例如：  
+如果提供日期多次格式化是一种比较笨的做法。一个格式字符串可以指示要格式化的参数的索引。    
+索引必须紧跟在％之后，并必须由$终止。例如：  
 ```
 import java.util.Date;
   
@@ -162,7 +163,7 @@ public class DateDemo {
 Due date: February 09, 2004
 ```
 
-##日期和时间转换字符：
+## 日期和时间转换字符：
 
 |字符|	描述|	例子|
 |----:|-----:|------:|
@@ -189,7 +190,7 @@ Due date: February 09, 2004
 |l|	两位数小时 (无前行零列), 1 和12之间|	6|
 |M|	两位数分钟 (用前行零列)	|05|
 |S|	两位数秒钟(用前行零列)	|19|
-|L|	三位数毫秒用前行零列)	|047|
+|L|	三位数毫秒（用前行零列)	|047|
 |N|	九位数纳秒 (用前行零列)|	047000000|
 |P|	大写上下午标记	|PM|
 |p|	小写上下午标记	|pm|
@@ -200,7 +201,7 @@ Due date: February 09, 2004
 
 有相关的日期和时间等有用的类。欲了解更多详细信息，可以参考Java标准文档。
 
-##解析字符串到日期：  
+## 解析字符串到日期：  
 SimpleDateFormat类有一些额外的方法，如parse()，它试图根据存储在给定SimpleDateFormat 的对象的格式来分析字符串。例如：
 ```
 import java.util.*;
@@ -234,8 +235,8 @@ $ java DateDemo 2007-12-01
 2007-12-01 Parses as Sat Dec 01 00:00:00 GMT 2007
 ```
 
-##休眠一会：
-你可以进行任何期间的时间休眠，从一个毫秒直到你的电脑的整个生命周期。例如，下面的程序会休眠10秒：
+## 休眠一段时间：
+你可以进行任何期间的时间休眠，从一毫秒直到你的电脑的整个生命周期。例如，下面的程序会休眠10秒：  
 ```
 import java.util.*;
   
@@ -258,8 +259,8 @@ Sun May 03 18:04:41 GMT 2009
 Sun May 03 18:04:51 GMT 2009
 ```
 
-##测量执行时间：  
-有时候，可能需要测量的时间点以毫秒为单位。因此，让我们再一次重新写上面的例子:  
+## 测量执行时间：  
+有时候，可能需要测量的时间点以毫秒为单位。因此，让我们再一次重新写上面的例子:    
 ```
 import java.util.*;
   
@@ -289,9 +290,11 @@ Sun May 03 18:16:57 GMT 2009
 Difference is : 5993
 ```
 
-##GregorianCalendar 类：
-GregorianCalendar是一个Calendar类具体的实现，即你所熟悉的对正常Gregorian公历的实现。本教程中不讨论Calendar类，可以看看标准Java文档。  
-Calendar的getInstance()方法返回与当前日期和时间默认语言环境和时区初始化的一个GregorianCalendar。 GregorianCalendar中定义了两个字段：AD和BC。这些代表在公历中定义的两个时代。  
+## GregorianCalendar 类：
+GregorianCalendar是一个Calendar类具体的实现，即你所熟悉的对正常Gregorian公历的实现。本教程中不讨论Calendar类，可以看看标准Java文档。   
+
+Calendar的getInstance()方法返回与当前日期和时间默认语言环境和时区初始化的一个GregorianCalendar。   GregorianCalendar中定义了两个字段：AD和BC。这些代表在公历中定义的两个时代。 
+
 也有几个构造函数的GregorianCalendar对象：
 
 |SN   |	 构造函数描述|
@@ -299,7 +302,7 @@ Calendar的getInstance()方法返回与当前日期和时间默认语言环境�
 |1|	GregorianCalendar() <br>在默认时区与默认语言环境使用当前时间构造默认的GregorianCalendar。|
 |2|	GregorianCalendar(int year, int month, int date) <br>在默认时区设置默认的语言环境用给定的日期构造一个GregorianCalendar|
 |3|	GregorianCalendar(int year, int month, int date, int hour, int minute) <br>用给定的日期和时间设置为与默认语言环境的默认时区构造一个GregorianCalendar。
-|4|	GregorianCalendar(int year, int month, int date, int hour, int minute, int second) <br>用给定的日期和时间设置为与默认语言环境的默认时区构造一 GregorianCalendar 
+|4|	GregorianCalendar(int year, int month, int date, int hour, int minute, int second) <br>用给定的日期和时间设置为与默认语言环境的默认时区构造一个 GregorianCalendar 
 |5|	GregorianCalendar(Locale aLocale) <br>基于当前时间与给定语言环境的默认时区构建一个GregorianCalendar。
 |6|	GregorianCalendar(TimeZone zone) <br>基于当前时间，使用默认的语言环境在给定的时区构建一个GregorianCalendar。
 |7|	GregorianCalendar(TimeZone zone, Locale aLocale) <br>基于当前时间与给定语言环境的给定时区构建一个GregorianCalendar。|  
@@ -308,13 +311,13 @@ Calendar的getInstance()方法返回与当前日期和时间默认语言环境�
 
 |SN|	方法和描述|
 |----:|-------:|
-|1|	void add(int field, int amount)  <br>添加指定（有符号的）时间量，以给定的时间字段，基于日历的规则。|
+|1|	void add(int field, int amount)  <br>基于日历的规则，以给定的时间字段添加指定（有符号的）时间量。|
 |2|	protected void computeFields() <br> 将UTC转换为毫秒时间字段值.|
 |3|	protected void computeTime()  <br>覆盖日历转换时间域值为UTC的毫秒.|
 |4|	boolean equals(Object obj)  <br>这个GregorianCalendar与一个对象引用比较.|
 |5|	int get(int field)  <br>获取给定时间域的值.|
 |6|	int getActualMaximum(int field)  <br>返回该字段可能的最大值，给定到当前的日期.|
-|7|	int getActualMinimum(int field) <br> 返回该字段可以具有的最低值，给定当前的日期.|
+|7|	int getActualMinimum(int field) <br> 返回该字段可能具有的最小值，给定当前的日期.|
 |8|	int getGreatestMinimum(int field)  <br>对于给定的字段中返回高最低值（如果有变化）.|
 |9|	Date getGregorianChange() <br> 获取公历更改日期.|
 |10|	int getLeastMaximum(int field)  <br>对于给定的字段返回最低的最大值，如果有变化.|
@@ -334,7 +337,8 @@ Calendar的getInstance()方法返回与当前日期和时间默认语言环境�
 |25	|void setTimeInMillis(long millis)  <br>从给定long值设置日历的当前时间.|
 |26	|void setTimeZone(TimeZone value)  <br>将时区设置与给定的时区值.|
 |27	|String toString() <br>返回此日历的字符串表示形式.|
-##示例：
+
+## 示例：
 ```
 import java.util.*;
   
