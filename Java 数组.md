@@ -51,10 +51,11 @@ dataType[] arrayRefVar = {value0, value1, ..., valuek};
 ```
 double[] myList = new double[10];
 ```
-以下图片代表数组 myList。在这里，myList 有10个 double 值，索引是从0到9。  
+以下图片代表数组 myList。在这里，myList 有10个 double 值，索引是从0到9。
+![image](images/java_array.jpg) 
  
 ##处理数组：  
-当处理数组元素，经常使用的是loop循环或foreach循环，因为所有的对数组中的元素是相同类型并且数组的大小是已知的。  
+当处理数组元素时，经常使用的是loop循环或foreach循环，因为所有的对数组中的元素是相同类型并且数组的大小是已知的。  
 
 ##示例：
 下面是一个演示如何创建，初始化和处理数组的完整例子：  
