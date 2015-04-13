@@ -9,6 +9,7 @@ byte mask = 0xaf;
 ```
 然而，在开发中，我们会遇到需要使用对象而不是原始数据类型的情况。为了实现这个Java为每个原始数据类型提供包装类。  
 所有的包装类 (Integer, Long, Byte, Double, Float, Short) 是抽象类Number的子类。   
+![image](images/number_classes.jpg) 
 
 这种包装是由编译器处理，这个过程称为装箱。因此，当一个原语被使用，当一个对象是必需的，编译器将原语放入其包装类。同样地，编译器也能将对象取出返回到原语。Number 是java.lang包的一部分。 
 这里是装箱和拆箱的一个例子：  
