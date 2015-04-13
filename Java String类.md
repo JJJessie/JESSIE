@@ -1,15 +1,15 @@
-#Java String类  
+# Java String类  
 字符串，它被广泛应用于Java编程，是一个字符序列。在Java编程语言中，字符串是对象。  
 Java平台提供了String类来创建和操作字符串。
 
-#创建字符串：  
+## 创建字符串：  
 最直接的方式来创建一个字符串是这样写的：
 ```
 String greeting = "Hello world!";
 ```
 无论何时在你的代码中遇到一个字符串，编译器在这种情况下用它的值创建一个String对象，如："Hello world!'.  
 
-任何其他对象可以通过使用new关键字，并构造函数创建String对象。 String类有11构造函数提供使用不同的来源的字符串的初始值，如一个字符数组。
+任何其他对象可以通过使用new关键字，并构造函数创建String对象。 String类有11种构造函数提供使用不同的来源的字符串的初始值，如一个字符数组。
 ```
 public class StringDemo{
 
@@ -24,9 +24,9 @@ public class StringDemo{
 ```
 hello.
 ```
-*注* String类是不可变的，因此，一旦创建了String对象那么是不能改变的。如果有必要大部分修改字符的字符串，那么应该使用 String Buffer & String Builder 类.
+**注** String类是不可变的，因此，一旦创建了String对象那么是不能改变的。如果有必要大部分修改字符的字符串，那么应该使用 String Buffer & String Builder 类.
 
-##String 长度: 
+## String 长度: 
 用于获取有关对象的信息的方法称为存取方法。可以和字符串一起使用的一个存取方法是length()方法，它返回包含在字符串对象中的字符数。  
 下面的两行代码被执行之后，len等于17：
 ```
@@ -43,12 +43,12 @@ public class StringDemo {
 ```
 String Length is : 17
 ```
-##连接字符串：  
+## 连接字符串：  
 String类包括用于连接两个字符串的方法：  
 ```
 string1.concat(string2);
 ```
-这返回个新的字符串，即在string1结尾处添加string2 。还可以使用concat（）方法连接字符串，如：  
+这返回一个新的字符串，即在string1结尾处添加string2 。还可以使用concat（）方法连接字符串，如：  
 ```
 "My name is ".concat("Zara");
 ```
@@ -75,7 +75,7 @@ public class StringDemo {
 Dot saw I was Tod
 ```
 
-##创建格式化字符串：  
+## 创建格式化字符串：  
 已经有 printf() 和 format() 方法来打印输出格式的数字。 String类有一个等价类的方法format()，它返回一个String对象，而不是一个PrintStream对象。
 使用字符串的静态format() 方法允许创建可重复使用的格式化字符串，而不是一次性的print语句。例如，代替以下方法：  
 ```
@@ -94,7 +94,7 @@ fs = String.format("The value of the float variable is " +
 System.out.println(fs);
 ```
 
-##String 方法:  
+## String 方法:  
 这里是由String类支持的方法列表：
 
 |SN|	方法及描述|
@@ -117,7 +117,7 @@ System.out.println(fs);
 |16	|int indexOf(int ch) <br>返回此字符串指定字符第一次出现处的索引。|
 |17	|int indexOf(int ch, int fromIndex) <br>返回索引这个字符串中指定字符第一次出现处，指定索引处开始搜索。|
 |18	|int indexOf(String str)<br>返回此字符串指定子字符串的第一次出现处的索引。|
-|19	|int indexOf(String str, int fromIndex)<br>返回这个字符串中指定子字符串的第一次出现处的索引，从指定的索引处开始。|
+|19	|int indexOf(String str,int fromIndex)<br>返回这个字符串中指定子字符串的第一次出现处的索引，从指定的索引处开始。|
 |20	|String intern()<br>返回字符串对象的规范化表示。|
 |21	|int lastIndexOf(int ch) <br>返回此字符串指定字符最后一次出现处的索引。|
 |22	|int lastIndexOf(int ch, int fromIndex) <br>返回此字符串指定字符最后一次出现处的索引，从指定索引开始向后搜索。|
