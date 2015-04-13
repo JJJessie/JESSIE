@@ -12,7 +12,7 @@ char uniChar = '\u039A';
 char[] charArray ={ 'a', 'b', 'c', 'd', 'e' };
 ```
 然而在开发中，我们会遇到我们需要使用对象而不是原始数据类型的情况。为了达到这个需求。Java为原始数据类型char提供了包装类Character。
-Character类为操控字符提供了一系列有用处的类（例如：静态类）。你可以借助Character构造器创造一个Character对象。  
+Character类为操控字符提供了一系列有用处的类（例如：静态类）。你可以借助Character构造函数创造一个Character对象。  
 ```
 Character ch = new Character('a');
 ```
